@@ -1,19 +1,29 @@
 public class AIProject {
-	public static String[][] board = new String[9][9];
+
+
+	public String p1;
+	public String p2;
+
+	public static String[] players = new String[p1,p2];
+
+	p1 = "Hello";
+	p2 = "Hey";
+
+	public static String[][] playingArea = new String[9][9];
 		public static void addSpace (int x, int y, String r){
-			board [x][y] = r;
+			playingArea [x][y] = r;
 		}
 
-	public static void showBoard(){
-		for (int row = 0; row < board.length; row++){
+	public static void showplayingArea(){
+		for (int row = 0; row < playingArea.length; row++){
 			System.out.println(" ");
 			System.out.println("------------------");
-			for(int col = 0; col < board[row].length; col++){
+			for(int col = 0; col < playingArea[row].length; col++){
 				System.out.print("|");
-				if(board[col][row] == null){
+				if(playingArea[col][row] == null){
 					System.out.print(" ");
 				}else{
-					System.out.print(board[col][row]);
+					System.out.print(playingArea[col][row]);
 				}
 			}
 		}
@@ -29,9 +39,9 @@ public class AIProject {
 //	public static void checkAvailableSpaces(){
 
 //	}
-
+	
 	public static void main(String[] args){
-		System.out.println(board.length);
+		System.out.println(playingArea.length);
 		addSpace(0,0," ");
 		addSpace(0,1,"1");
 		addSpace(0,2,"2");
@@ -51,7 +61,7 @@ public class AIProject {
 		addSpace(8,0,"8");
 		addSpace(1,1,"X");
 		addSpace(8,8,"Y");
-		showBoard();
+		showplayingArea();
 
 	}
 }
